@@ -119,10 +119,42 @@
  .hpa .card img{height:360px}
 }
 </style>
+<!--MASCOT--><style>
+.hlogo img{display:block;height:auto}
+.hmas{display:block;pointer-events:auto}
+.hmas img{width:100%;height:auto;display:block}
+
+.hpa .hlogo img,.hpa .hmas img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
+@media (max-width:780px){.hpa .hmas{width:96px!important}}
+</style>
+<script>
+(function(){if(window.__hm)return;window.__hm=1;
+var B="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_";
+function seq(n,c){var a=[];for(var i=1;i<=c;i++)a.push(B+n+"_frame_0"+i+".png");return a}
+function load(list){return Promise.all(list.map(function(u){return new Promise(function(r){var im=new Image();im.onload=function(){r(u)};im.onerror=function(){r(null)};im.src=u})})).then(function(a){return a.filter(Boolean)})}
+function start(){
+ var els=document.querySelectorAll('.hmas img');if(!els.length)return;
+ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ Promise.all([load(seq("hello_wave",8)),load(seq("idle_breeze",6)),load(seq("smart_wink",8))]).then(function(s){
+  var W=s[0],I=s[1],K=s[2];
+  els.forEach(function(img){
+   var t=null,busy=false;
+   function play(f,ms,loops,done){clearInterval(t);if(!f.length){done&&done();return}var i=0,n=0;t=setInterval(function(){img.src=f[i];i++;if(i>=f.length){i=0;n++;if(n>=loops){clearInterval(t);done&&done()}}},ms)}
+   function idle(){busy=false;play(I,170,4,function(){if(W[0])img.src=W[0]})}
+   var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();busy=true;play(W,115,1,function(){setTimeout(idle,450)})}},{threshold:.4});
+   io.observe(img);
+   img.addEventListener('mouseenter',function(){if(busy)return;busy=true;play(K,115,1,function(){setTimeout(idle,350)})});
+   img.addEventListener('click',function(){if(busy)return;busy=true;play(K,115,1,function(){setTimeout(idle,350)})});
+  });
+ });
+}
+if(document.readyState!=="loading")start();else document.addEventListener("DOMContentLoaded",start);
+})();
+</script>
 <div class="hpa">
 
   <header class="top">
-    <a class="logo" href="/">HIPPEY'S</a>
+    <a class="logo hlogo" href="/" style="background:#F4EBD8;padding:8px 12px;border-radius:6px;display:inline-block"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_denver_meat_co_transparent.png" alt="Denver Meat Co. — Hippey's" style="width:150px"></a>
     <nav class="nav" aria-label="Main">
       <a href="/about-us">Our Story</a>
       <a href="/products">Our Meats</a>
@@ -208,8 +240,10 @@
 
   <section class="signup">
     <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px"><div>
       <span class="kicker">Factory Sale</span>
       <h2 style="font-size:clamp(28px,3vw,40px);margin-top:14px">Hear about the next one first.</h2>
+      </div><span class="hmas" style="width:150px;flex:0 0 auto"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_hello_wave_frame_01.png" alt="Hippey's hot dog mascot waving hello" width="150" height="150"></span></div>
       <!-- Connect this form to your email tool (WPForms / Mailchimp) before going live -->
       <form onsubmit="return false">
         <label class="sr" for="hpa-email">Email address</label>

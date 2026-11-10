@@ -40,9 +40,41 @@
 .plx{background-attachment:fixed!important}
 @media (max-width:1024px),(hover:none),(prefers-reduced-motion:reduce){.plx{background-attachment:scroll!important}}
 </style>
+<!--MASCOT--><style>
+.hlogo img{display:block;height:auto}
+.hmas{display:block;pointer-events:auto}
+.hmas img{width:100%;height:auto;display:block}
+
+.hp-b .hlogo img,.hp-b .hmas img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
+@media (max-width:780px){.hp-b .hmas{width:96px!important}}
+</style>
+<script>
+(function(){if(window.__hm)return;window.__hm=1;
+var B="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_";
+function seq(n,c){var a=[];for(var i=1;i<=c;i++)a.push(B+n+"_frame_0"+i+".png");return a}
+function load(list){return Promise.all(list.map(function(u){return new Promise(function(r){var im=new Image();im.onload=function(){r(u)};im.onerror=function(){r(null)};im.src=u})})).then(function(a){return a.filter(Boolean)})}
+function start(){
+ var els=document.querySelectorAll('.hmas img');if(!els.length)return;
+ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ Promise.all([load(seq("hello_wave",8)),load(seq("idle_breeze",6)),load(seq("smart_wink",8))]).then(function(s){
+  var W=s[0],I=s[1],K=s[2];
+  els.forEach(function(img){
+   var t=null,busy=false;
+   function play(f,ms,loops,done){clearInterval(t);if(!f.length){done&&done();return}var i=0,n=0;t=setInterval(function(){img.src=f[i];i++;if(i>=f.length){i=0;n++;if(n>=loops){clearInterval(t);done&&done()}}},ms)}
+   function idle(){busy=false;play(I,170,4,function(){if(W[0])img.src=W[0]})}
+   var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();busy=true;play(W,115,1,function(){setTimeout(idle,450)})}},{threshold:.4});
+   io.observe(img);
+   img.addEventListener('mouseenter',function(){if(busy)return;busy=true;play(K,115,1,function(){setTimeout(idle,350)})});
+   img.addEventListener('click',function(){if(busy)return;busy=true;play(K,115,1,function(){setTimeout(idle,350)})});
+  });
+ });
+}
+if(document.readyState!=="loading")start();else document.addEventListener("DOMContentLoaded",start);
+})();
+</script>
 <div class="hp-b"><div style="background: #F5EEDF; color: #2A2622; font-family: Unna, Georgia, serif; width: 100%;">
 <header style="padding: 26px 6% 0; display: flex; flex-direction: column; align-items: center; gap: 18px;">
-<a href="#b" style="font-family: 'Alfa Slab One', serif; font-size: 34px; color: #0F2240; text-decoration: none; letter-spacing: .06em;">HIPPEY'S</a>
+<a class="hlogo" href="#b"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_denver_meat_co_transparent.png" alt="Denver Meat Co. — Hippey's" style="width:260px;max-width:70vw"></a>
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 36px; font-family: Rokkitt, serif; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; border-top: 1px solid #0F2240; border-bottom: 1px solid #0F2240; padding: 12px 24px; width: 100%; max-width: 1100px; box-sizing: border-box;">
 <a href="#b" style="text-decoration: none;">Our Story</a><a href="#b" style="text-decoration: none;">How We Make It</a><a href="#b" style="text-decoration: none;">Our Meats</a><a href="#b" style="text-decoration: none;">Recipes</a><a href="#b" style="text-decoration: none;">Where to Buy</a><a href="#b" style="text-decoration: none;">For Retailers</a>
 </nav>
@@ -54,7 +86,7 @@
 <div class="plx" role="img" style="height:560px;background:url('https://denvermeats.com/wp-content/uploads/2026/11/JSF_7042-scaled.jpg') center/cover no-repeat;width:100%;max-width:1100px;margin-top:24px"></div>
 </section>
 <section style="padding: 0 6% 120px; display: flex; flex-direction: column; align-items: center; gap: 56px;">
-<h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: 40px; color: #0F2240;">The family record</h2>
+<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center"><span class="hmas" style="width:120px;"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_hello_wave_frame_01.png" alt="Hippey's hot dog mascot waving hello" width="120" height="120"></span><h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: 40px; color: #0F2240;">The family record</h2></div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; width: 100%; max-width: 1100px; border-top: 2px solid #0F2240;">
 <div style="padding: 28px 28px 0 0; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'Alfa Slab One', serif; font-size: 44px; color: #B4500F;">1969</span><p style="margin: 0; font-size: 20px; line-height: 1.55;">Jay Hippey and George Sirianni buy the old Leid's Meats building on Railroad Street.</p></div>
 <div style="padding: 28px 28px 0; border-left: 1px solid rgba(15,34,64,.25); display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'Alfa Slab One', serif; font-size: 44px; color: #B4500F;">Then</span><p style="margin: 0; font-size: 20px; line-height: 1.55;">Ring bologna and franks sold under the Hippey's name, smoked over hickory, tied by hand.</p></div>

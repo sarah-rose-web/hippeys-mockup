@@ -41,12 +41,44 @@
 .plx{background-attachment:fixed!important}
 @media (max-width:1024px),(hover:none),(prefers-reduced-motion:reduce){.plx{background-attachment:scroll!important}}
 </style>
+<!--MASCOT--><style>
+.hlogo img{display:block;height:auto}
+.hmas{display:block;pointer-events:auto}
+.hmas img{width:100%;height:auto;display:block}
+
+.hp-c .hlogo img,.hp-c .hmas img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
+@media (max-width:780px){.hp-c .hmas{width:96px!important}}
+</style>
+<script>
+(function(){if(window.__hm)return;window.__hm=1;
+var B="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_";
+function seq(n,c){var a=[];for(var i=1;i<=c;i++)a.push(B+n+"_frame_0"+i+".png");return a}
+function load(list){return Promise.all(list.map(function(u){return new Promise(function(r){var im=new Image();im.onload=function(){r(u)};im.onerror=function(){r(null)};im.src=u})})).then(function(a){return a.filter(Boolean)})}
+function start(){
+ var els=document.querySelectorAll('.hmas img');if(!els.length)return;
+ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ Promise.all([load(seq("hello_wave",8)),load(seq("idle_breeze",6)),load(seq("smart_wink",8))]).then(function(s){
+  var W=s[0],I=s[1],K=s[2];
+  els.forEach(function(img){
+   var t=null,busy=false;
+   function play(f,ms,loops,done){clearInterval(t);if(!f.length){done&&done();return}var i=0,n=0;t=setInterval(function(){img.src=f[i];i++;if(i>=f.length){i=0;n++;if(n>=loops){clearInterval(t);done&&done()}}},ms)}
+   function idle(){busy=false;play(I,170,4,function(){if(W[0])img.src=W[0]})}
+   var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();busy=true;play(W,115,1,function(){setTimeout(idle,450)})}},{threshold:.4});
+   io.observe(img);
+   img.addEventListener('mouseenter',function(){if(busy)return;busy=true;play(K,115,1,function(){setTimeout(idle,350)})});
+   img.addEventListener('click',function(){if(busy)return;busy=true;play(K,115,1,function(){setTimeout(idle,350)})});
+  });
+ });
+}
+if(document.readyState!=="loading")start();else document.addEventListener("DOMContentLoaded",start);
+})();
+</script>
 <div class="hp-c"><div style="background: #F7F4EE; color: #22252B; font-family: Inter, system-ui, sans-serif; width: 100%;">
 <header style="padding: 22px 5%; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 15px; font-weight: 500;">
 <a href="#c" style="text-decoration: none;">Our Meats</a><a href="#c" style="text-decoration: none;">Recipes</a><a href="#c" style="text-decoration: none;">Our Story</a><a href="#c" style="text-decoration: none;">For Retailers</a>
 </nav>
-<a href="#c" style="font-family: 'Alfa Slab One', serif; font-size: 26px; color: #0F2240; text-decoration: none;">HIPPEY'S</a>
+<a class="hlogo" href="#c"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_denver_meat_co_transparent.png" alt="Denver Meat Co. — Hippey's" style="width:190px;max-width:46vw"></a>
 <a href="#c" style="background: #0F2240; color: #F7F4EE; font-size: 15px; font-weight: 600; padding: 11px 20px; border-radius: 999px; text-decoration: none;">Where to Buy</a>
 </header>
 <section style="padding: 64px 5% 40px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center;">
@@ -69,7 +101,7 @@
 </div>
 </section>
 <section style="padding: 40px 5% 88px;">
-<h2 style="margin: 0 0 28px; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: 34px; color: #0F2240;">What's it for tonight?</h2>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px"><h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: 34px; color: #0F2240;">What's it for tonight?</h2><span class="hmas" style="width:130px;flex:0 0 auto"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_hello_wave_frame_01.png" alt="Hippey's hot dog mascot waving hello" width="130" height="130"></span></div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
 <a href="#c" style="text-decoration: none; display: flex; flex-direction: column; gap: 10px;"><img src="https://denvermeats.com/wp-content/uploads/2026/11/C5-%E2%80%94-Game-Day-Slow-Cooker-Franks-4-3.png" alt="Slow cooker franks for game day" loading="lazy" style="width:100%;height:220px;object-fit:cover;object-position:center;display:block;border-radius:16px"><span style="font-weight: 600; font-size: 16px;">Game day</span></a>
 <a href="#c" style="text-decoration: none; display: flex; flex-direction: column; gap: 10px;"><img src="https://denvermeats.com/wp-content/uploads/2026/11/C6-%E2%80%94-Weeknight-Ring-Bologna-Stuffed-Peppers-4-3.png" alt="Ring bologna stuffed peppers" loading="lazy" style="width:100%;height:220px;object-fit:cover;object-position:center;display:block;border-radius:16px"><span style="font-weight: 600; font-size: 16px;">Weeknight supper</span></a>
