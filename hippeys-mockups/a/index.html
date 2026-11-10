@@ -125,7 +125,14 @@
 .hmas img{width:100%;height:auto;display:block}
 
 .hpa .hlogo img,.hpa .hmas img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
-@media (max-width:780px){.hpa .hmas{width:96px!important}}
+
+
+.hpa .spot{position:relative;padding:10px;aspect-ratio:1/1;display:flex!important;align-items:center;background:radial-gradient(circle,rgba(232,164,106,.35) 0%,rgba(232,164,106,.12) 45%,transparent 70%);border-radius:50%;filter:drop-shadow(0 10px 18px rgba(0,0,0,.18));transition:transform .25s}
+.hpa .spot:hover{transform:translateY(-4px) rotate(-2deg)}
+.hpa .spot::after{content:attr(data-say);position:absolute;top:-6px;right:-14px;transform:translateX(30%);background:#16181C;color:#F4EBD8;border:2px solid #F4EBD8;font:700 14px/1.2 Rokkitt,Georgia,serif;letter-spacing:.04em;padding:7px 11px;border-radius:14px 14px 14px 2px;white-space:nowrap;animation:hbub 4s ease-in-out infinite}
+@keyframes hbub{0%,100%{transform:translateX(30%) translateY(0)}50%{transform:translateX(30%) translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.hpa .spot::after{animation:none}}
+@media (max-width:780px){.hpa .spot{width:130px!important}.hpa .spot::after{font-size:12px;right:0;transform:none;animation:none}}
 </style>
 <script>
 (function(){if(window.__hm)return;window.__hm=1;
@@ -154,7 +161,7 @@ if(document.readyState!=="loading")start();else document.addEventListener("DOMCo
 <div class="hpa">
 
   <header class="top">
-    <a class="logo hlogo" href="/" style="background:#F4EBD8;padding:8px 12px;border-radius:6px;display:inline-block"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_denver_meat_co_transparent.png" alt="Denver Meat Co. — Hippey's" style="width:150px"></a>
+    <a class="logo hlogo" href="/" style="display:inline-block"><img src="https://denvermeats.com/wp-content/uploads/2026/11/denver_meat_co_hippeys_transparent.png" alt="Denver Meat Co. — Hippey's" style="width:170px"></a>
     <nav class="nav" aria-label="Main">
       <a href="/about-us">Our Story</a>
       <a href="/products">Our Meats</a>
@@ -243,7 +250,7 @@ if(document.readyState!=="loading")start();else document.addEventListener("DOMCo
       <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px"><div>
       <span class="kicker">Factory Sale</span>
       <h2 style="font-size:clamp(28px,3vw,40px);margin-top:14px">Hear about the next one first.</h2>
-      </div><span class="hmas" style="width:150px;flex:0 0 auto"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_hello_wave_frame_01.png" alt="Hippey's hot dog mascot waving hello" width="150" height="150"></span></div>
+      </div><span class="hmas spot" data-say="Hear about the next sale first!" style="width:210px;flex:0 0 auto"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_hello_wave_frame_01.png" alt="Hippey's hot dog mascot waving hello" width="150" height="150"></span></div>
       <!-- Connect this form to your email tool (WPForms / Mailchimp) before going live -->
       <form onsubmit="return false">
         <label class="sr" for="hpa-email">Email address</label>

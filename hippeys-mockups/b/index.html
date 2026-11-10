@@ -46,7 +46,14 @@
 .hmas img{width:100%;height:auto;display:block}
 
 .hp-b .hlogo img,.hp-b .hmas img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
-@media (max-width:780px){.hp-b .hmas{width:96px!important}}
+
+
+.hp-b .spot{position:relative;padding:10px;aspect-ratio:1/1;display:flex!important;align-items:center;background:radial-gradient(circle,#FFF3CC 0%,#FFF3CC 55%,transparent 56%);border-radius:50%;filter:drop-shadow(0 10px 18px rgba(0,0,0,.18));transition:transform .25s}
+.hp-b .spot:hover{transform:translateY(-4px) rotate(-2deg)}
+.hp-b .spot::after{content:attr(data-say);position:absolute;top:-6px;right:-14px;transform:translateX(30%);background:#F5EEDF;color:#0F2240;border:2px solid #0F2240;font:700 14px/1.2 Rokkitt,Georgia,serif;letter-spacing:.04em;padding:7px 11px;border-radius:14px 14px 14px 2px;white-space:nowrap;animation:hbub 4s ease-in-out infinite}
+@keyframes hbub{0%,100%{transform:translateX(30%) translateY(0)}50%{transform:translateX(30%) translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.hp-b .spot::after{animation:none}}
+@media (max-width:780px){.hp-b .spot{width:130px!important}.hp-b .spot::after{font-size:12px;right:0;transform:none;animation:none}}
 </style>
 <script>
 (function(){if(window.__hm)return;window.__hm=1;
@@ -74,7 +81,7 @@ if(document.readyState!=="loading")start();else document.addEventListener("DOMCo
 </script>
 <div class="hp-b"><div style="background: #F5EEDF; color: #2A2622; font-family: Unna, Georgia, serif; width: 100%;">
 <header style="padding: 26px 6% 0; display: flex; flex-direction: column; align-items: center; gap: 18px;">
-<a class="hlogo" href="#b"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_denver_meat_co_transparent.png" alt="Denver Meat Co. — Hippey's" style="width:260px;max-width:70vw"></a>
+<a class="hlogo" href="#b"><img src="https://denvermeats.com/wp-content/uploads/2026/11/denver_meat_co_hippeys_transparent.png" alt="Denver Meat Co. — Hippey's" style="width:260px;max-width:70vw"></a>
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 36px; font-family: Rokkitt, serif; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; border-top: 1px solid #0F2240; border-bottom: 1px solid #0F2240; padding: 12px 24px; width: 100%; max-width: 1100px; box-sizing: border-box;">
 <a href="#b" style="text-decoration: none;">Our Story</a><a href="#b" style="text-decoration: none;">How We Make It</a><a href="#b" style="text-decoration: none;">Our Meats</a><a href="#b" style="text-decoration: none;">Recipes</a><a href="#b" style="text-decoration: none;">Where to Buy</a><a href="#b" style="text-decoration: none;">For Retailers</a>
 </nav>
@@ -86,7 +93,7 @@ if(document.readyState!=="loading")start();else document.addEventListener("DOMCo
 <div class="plx" role="img" style="height:560px;background:url('https://denvermeats.com/wp-content/uploads/2026/11/JSF_7042-scaled.jpg') center/cover no-repeat;width:100%;max-width:1100px;margin-top:24px"></div>
 </section>
 <section style="padding: 0 6% 120px; display: flex; flex-direction: column; align-items: center; gap: 56px;">
-<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center"><span class="hmas" style="width:120px;"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_hello_wave_frame_01.png" alt="Hippey's hot dog mascot waving hello" width="120" height="120"></span><h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: 40px; color: #0F2240;">The family record</h2></div>
+<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center"><span class="hmas spot" data-say="Since 1969!" style="width:170px;"><img src="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_hello_wave_frame_01.png" alt="Hippey's hot dog mascot waving hello" width="120" height="120"></span><h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: 40px; color: #0F2240;">The family record</h2></div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; width: 100%; max-width: 1100px; border-top: 2px solid #0F2240;">
 <div style="padding: 28px 28px 0 0; display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'Alfa Slab One', serif; font-size: 44px; color: #B4500F;">1969</span><p style="margin: 0; font-size: 20px; line-height: 1.55;">Jay Hippey and George Sirianni buy the old Leid's Meats building on Railroad Street.</p></div>
 <div style="padding: 28px 28px 0; border-left: 1px solid rgba(15,34,64,.25); display: flex; flex-direction: column; gap: 10px;"><span style="font-family: 'Alfa Slab One', serif; font-size: 44px; color: #B4500F;">Then</span><p style="margin: 0; font-size: 20px; line-height: 1.55;">Ring bologna and franks sold under the Hippey's name, smoked over hickory, tied by hand.</p></div>
