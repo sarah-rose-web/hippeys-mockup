@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Hippey's · Idea A — Smokehouse Editorial</title>
+<style>html,body{margin:0;padding:0;background:#16181C;overflow-x:hidden}</style>
+</head><body>
+<!-- ============================================================
+  HIPPEY'S HOMEPAGE — IDEA A: SMOKEHOUSE EDITORIAL (v2)
+  Paste into ONE Elementor "HTML" widget on a page set to
+  Page Layout: "Elementor Canvas". Everything is scoped to .hpa
+  so it won't affect the rest of the site.
+  PHOTOS: search this file for "PHOTO-" to find every image slot.
+  Swap the URL inside url('...') or src="..." with your new photo.
+============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Rokkitt:wght@500;700&family=Unna:ital@1&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+.hpa{--ink:#16181C;--ink2:#1E2128;--cream:#F4EBD8;--text:#E9E1D0;--accent:#E8A46A;--orange:#E8620A;--tan:#D4A55A;
+  background:var(--ink);color:var(--text);font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.hpa *{box-sizing:border-box}
+.hpa a{color:var(--cream)!important;text-decoration:none!important;box-shadow:none!important}
+.hpa a.btn{color:var(--ink)!important}.hpa a.btn.ghost{color:var(--text)!important}
+.hpa{width:100vw;position:relative;left:50%;margin-left:-50vw}
+.hpa h1,.hpa h2,.hpa h3{font-family:'Alfa Slab One',Georgia,serif;font-weight:400;color:var(--cream);margin:0;letter-spacing:.01em}
+.hpa p{margin:0}
+.hpa .wrap{max-width:1280px;margin:0 auto;padding:0 6%}
+.hpa .kicker{font-family:Rokkitt,serif;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.hpa .link{font-family:Rokkitt,serif;font-size:18px;letter-spacing:.1em;text-transform:uppercase;border-bottom:2px solid var(--orange);padding-bottom:6px;display:inline-block}
+.hpa .btn{display:inline-block;font-family:Rokkitt,serif;font-weight:700;font-size:17px;letter-spacing:.06em;text-transform:uppercase;padding:14px 26px;background:var(--orange);color:var(--ink)}
+.hpa .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--text);font-weight:500}
+.hpa .btn:hover{filter:brightness(1.08)}
+/* header */
+.hpa .top{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;padding:26px 6%;border-bottom:1px solid rgba(233,225,208,.12)}
+.hpa .logo{font-family:'Alfa Slab One',serif;font-size:24px;letter-spacing:.04em;color:var(--cream)}
+.hpa .nav{display:flex;flex-wrap:wrap;gap:28px;font-family:Rokkitt,serif;font-size:17px;letter-spacing:.08em;text-transform:uppercase}
+.hpa .nav a:hover{color:var(--accent)}
+/* hero (parallax) */
+.hpa .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;
+  background:linear-gradient(180deg,rgba(22,24,28,.15) 0%,rgba(22,24,28,.35) 45%,rgba(22,24,28,.92) 100%),
+  url('https://denvermeats.com/wp-content/uploads/2026/11/A1-%E2%80%94-Hero-Ring-Bologna-on-the-Board-16-9.png') center/cover no-repeat fixed;} /* PHOTO-A1 hero */
+.hpa .hero .wrap{padding-bottom:96px;width:100%}
+.hpa .hero h1{font-size:clamp(42px,6vw,76px);line-height:1.04;max-width:760px;margin:20px 0 28px}
+/* quote */
+.hpa .quote{padding:140px 6%;text-align:center}
+.hpa .quote p{max-width:840px;margin:0 auto;font-family:Unna,serif;font-style:italic;font-size:clamp(26px,3vw,38px);line-height:1.45;color:var(--cream)}
+/* split */
+.hpa .split{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:72px;align-items:center;padding-bottom:140px}
+.hpa .split img{width:100%;height:560px;object-fit:cover;display:block;filter:saturate(.85)}
+.hpa .split h2{font-size:clamp(30px,3.2vw,42px);line-height:1.12;margin:22px 0 28px}
+.hpa .facts p{border-top:1px solid rgba(233,225,208,.15);padding:16px 0}
+/* meats */
+.hpa .meats{background:var(--ink2);padding:140px 0}
+.hpa .meats-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:56px}
+.hpa .meats-head h2{font-size:42px}
+.hpa .meats-head span{font-family:Unna,serif;font-style:italic;font-size:20px;color:var(--tan)}
+.hpa .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+.hpa .card img{width:100%;height:420px;object-fit:cover;display:block;filter:saturate(.85);transition:filter .3s}
+.hpa .card:hover img{filter:saturate(1)}
+.hpa .card h3{font-family:Rokkitt,serif;font-weight:700;font-size:22px;letter-spacing:.08em;text-transform:uppercase;margin:18px 0 8px}
+.hpa .card h3 em{font-style:normal;color:var(--accent)}
+.hpa .card p{font-size:17px;line-height:1.6}
+/* buy */
+.hpa .buy{padding:140px 0}
+.hpa .buy .ph{height:480px;border:1px dashed rgba(212,165,90,.5);display:flex;align-items:flex-end;
+  background:repeating-linear-gradient(135deg,rgba(212,165,90,.10) 0 14px,rgba(212,165,90,.04) 14px 28px)}
+.hpa .buy .ph span{font-family:Rokkitt,serif;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;background:rgba(22,24,28,.9);padding:8px 12px;margin:14px}
+.hpa .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+/* signup */
+.hpa .signup{border-top:1px solid rgba(233,225,208,.12);padding:96px 0}
+.hpa .signup form{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;max-width:560px}
+.hpa .signup input{flex:1 1 240px;min-height:52px;background:transparent;border:1px solid rgba(233,225,208,.4);color:var(--cream);padding:0 18px;font-size:16px;font-family:inherit}
+.hpa .signup button{min-height:52px;border:none;cursor:pointer}
+/* footer */
+.hpa .foot{border-top:1px solid rgba(233,225,208,.12);padding:56px 6%;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;font-family:Rokkitt,serif;font-size:16px;letter-spacing:.08em}
+.hpa .sr{position:absolute;left:-9999px}
+/* phones & tablets: parallax off (iOS doesn't support fixed backgrounds) */
+@media (max-width:1024px),(hover:none){.hpa .hero{background-attachment:scroll}}
+@media (max-width:780px){
+  .hpa{font-size:17px}
+  .hpa .hero{min-height:78vh}
+  .hpa .hero .wrap{padding-bottom:56px}
+  .hpa .quote{padding:88px 6%}
+  .hpa .split{gap:36px;padding-bottom:88px}
+  .hpa .split img,.hpa .buy .ph{height:340px}
+  .hpa .meats,.hpa .buy{padding:88px 0}
+  .hpa .card img{height:320px}
+  .hpa .nav{gap:16px;font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.hpa .hero{background-attachment:scroll}.hpa *{transition:none!important}}
+</style>
+
+<div class="hpa">
+
+  <header class="top">
+    <a class="logo" href="/">HIPPEY'S</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/about-us">Our Story</a>
+      <a href="/products">Our Meats</a>
+      <a href="/free-recipes">Recipes</a>
+      <a href="/locations">Where to Buy</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PHOTO-A1 hero: set in the CSS above (.hpa .hero) -->
+  <section class="hero" aria-label="Hippey's, Denver PA since 1969">
+    <div class="wrap">
+      <span class="kicker">Railroad Street · Denver, PA · Est. 1969</span>
+      <h1>Smoked with wood.<br>Tied by hand.</h1>
+      <a class="link" href="/locations">Find Hippey's near you →</a>
+    </div>
+  </section>
+
+  <section class="quote">
+    <p>"Same building on Railroad Street since 1969. Same hickory. Casings still tied by hand. That's the whole secret."</p>
+  </section>
+
+  <section class="wrap split">
+    <!-- PHOTO-A2 -->
+    <img src="https://denvermeats.com/wp-content/uploads/2026/11/JSF_6309-scaled.jpg" alt="Hand-tied Hippey's ring bologna hanging on racks at the Denver, PA plant" loading="lazy">
+    <div>
+      <span class="kicker">The Smokehouse</span>
+      <h2>Some smoked meat is smoked with a liquid. Ours is smoked with wood.</h2>
+      <div class="facts">
+        <p>Real hickory smoke.</p>
+        <p>Beef from Dillsburg. Pork from Souderton.</p>
+        <p>Every casing tied by hand.</p>
+        <p>Founded in 1969 by Jay Hippey and George Sirianni. Run today by George's grandson, Matt Forney.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="meats">
+    <div class="wrap">
+      <div class="meats-head">
+        <h2>The meats</h2>
+        <span>Three of the top four franks in the U.S. — The Daily Meal, July 2025</span>
+      </div>
+      <div class="grid3">
+        <a class="card" href="/products/ring-bologna">
+          <!-- PHOTO-A3 -->
+          <img src="https://denvermeats.com/wp-content/uploads/2026/11/A3-%E2%80%94-Ring-Bologna-Card-3-4-.png" alt="Hippey's Ring Bologna, sliced" loading="lazy">
+          <h3>Ring Bologna</h3>
+          <p>Hickory-smoked, tied by hand. Original, Garlic, Jalapeño &amp; Cheese, Honey.</p>
+        </a>
+        <a class="card" href="/products/franks">
+          <!-- PHOTO-A4 -->
+          <img src="https://denvermeats.com/wp-content/uploads/2026/11/A4-%E2%80%94-Franks-on-the-Fire-3-4.png" alt="Hippey's Franks" loading="lazy">
+          <h3>Franks <em>· #1, #2, #4 in the U.S.</em></h3>
+          <p>Chili Cheese, Cheese, Jalapeño &amp; Cheese, All Beef, Original.</p>
+        </a>
+        <a class="card" href="/products/meat-sticks">
+          <!-- PHOTO-A5 -->
+          <img src="https://denvermeats.com/wp-content/uploads/2026/11/A5-%E2%80%94-Meat-Sticks-at-the-Tailgate-3-4.png" alt="Hippey's Snack Sticks" loading="lazy">
+          <h3>Meat Sticks</h3>
+          <p>Smoked Snack Sticks, Sweet Bologna, Hot Pepper Cheese. The 3 PM fix.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="buy">
+    <div class="wrap split" style="padding-bottom:0">
+      <div>
+        <span class="kicker">Where to Buy</span>
+        <h2>On the shelf at your corner store.</h2>
+        <p>Redner's, Weis, Weaver's, Stauffer's of Kissel Hill and more across Lancaster County. Out of state? Order from PA General Store.</p>
+        <div class="btns">
+          <a class="btn" href="/locations">Store locator</a>
+          <a class="btn ghost" href="https://pageneralstore.com/collections/hippeys-meats" target="_blank" rel="noopener">Order online</a>
+        </div>
+      </div>
+      <!-- PHOTO-A6 (missing): replace this whole <div class="ph">…</div> with
+           <img src="YOUR-PHOTO-URL" alt="Hippey's on a store shelf" loading="lazy" style="width:100%;height:480px;object-fit:cover"> -->
+      <img src="https://denvermeats.com/wp-content/uploads/2026/11/A6-%E2%80%94-On-the-Shelf-4-3.png" alt="Hippey's packs on a store shelf" loading="lazy" style="width:100%;height:480px;object-fit:cover;display:block">
+    </div>
+  </section>
+
+  <section class="signup">
+    <div class="wrap">
+      <span class="kicker">Factory Sale</span>
+      <h2 style="font-size:clamp(28px,3vw,40px);margin-top:14px">Hear about the next one first.</h2>
+      <!-- Connect this form to your email tool (WPForms / Mailchimp) before going live -->
+      <form onsubmit="return false">
+        <label class="sr" for="hpa-email">Email address</label>
+        <input id="hpa-email" type="email" placeholder="Your email">
+        <button class="btn" type="submit">Notify me</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span style="font-family:'Alfa Slab One',serif;font-size:20px;color:var(--cream)">HIPPEY'S · EST. 1969</span>
+    <span><a href="https://goo.gl/maps/ZnCbcNAEEcDhPdnv7" target="_blank" rel="noopener">350 Railroad St, Denver, PA 17517</a> · <a href="tel:7173366577">717-336-6577</a></span>
+    <span><a href="https://www.facebook.com/Hippeys-Meat-Company-108691189161702/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/hippeysmeats/" target="_blank" rel="noopener">Instagram</a> · <span style="color:var(--accent)">#ILOVEHIPPEYS</span></span>
+  </footer>
+
+</div>
+
+</body></html>
