@@ -167,7 +167,6 @@ if(document.readyState!=="loading")start();else document.addEventListener("DOMCo
 })();
 </script>
 <!--PLXMOB--><style>
-.plx,.hpa .hero{background-attachment:scroll!important}
 .plx-on{position:relative;overflow:hidden;background-image:none!important}
 .plx-on>.plx-l{position:absolute;left:0;right:0;top:-18%;height:136%;background-size:cover;background-position:center;background-repeat:no-repeat;will-change:transform;z-index:0;pointer-events:none}
 .plx-on>*:not(.plx-l){position:relative;z-index:1}
@@ -176,6 +175,7 @@ if(document.readyState!=="loading")start();else document.addEventListener("DOMCo
 (function(){if(window.__plx)return;window.__plx=1;
 function init(){
  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ if(!matchMedia('(max-width:1024px),(hover:none)').matches)return;
  var els=[].slice.call(document.querySelectorAll('.plx,.hpa .hero'));var L=[];
  els.forEach(function(el){var bi=getComputedStyle(el).backgroundImage;if(!bi||bi==='none')return;
   var l=document.createElement('div');l.className='plx-l';l.style.backgroundImage=bi;el.insertBefore(l,el.firstChild);el.classList.add('plx-on');L.push([el,l]);});
