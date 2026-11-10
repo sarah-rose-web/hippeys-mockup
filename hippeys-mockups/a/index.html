@@ -91,6 +91,34 @@
 @media (prefers-reduced-motion:reduce){.hpa .hero{background-attachment:scroll}.hpa *{transition:none!important}}
 </style>
 
+<!--MOBILE--><style>
+@media (max-width:780px){
+ .hpa .top{padding:16px 20px;gap:12px}
+ .hpa nav{flex-wrap:nowrap!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:18px!important;font-size:14px!important;justify-content:flex-start!important;white-space:nowrap;max-width:100%}
+.hpa nav::-webkit-scrollbar{display:none}
+ .hpa .nav{width:100%}
+ .hpa .hero{min-height:72vh}
+ .hpa .hero h1{font-size:38px;margin:14px 0 20px}
+ .hpa .kicker{font-size:12px;letter-spacing:.14em}
+ .hpa .quote{padding:64px 20px} .hpa .quote p{font-size:24px}
+ .hpa .wrap{padding:0 20px}
+ .hpa .split{grid-template-columns:1fr;gap:28px;padding-bottom:64px}
+ .hpa .split img{height:auto;aspect-ratio:4/5}
+ .hpa .split h2{font-size:28px}
+ .hpa .meats,.hpa .buy{padding:64px 0}
+ .hpa .meats-head h2{font-size:32px}
+ .hpa .grid3{grid-template-columns:1fr;gap:36px}
+ .hpa .card img{height:auto;aspect-ratio:4/5}
+ .hpa .buy img{height:auto!important;aspect-ratio:4/3}
+ .hpa .btns .btn{flex:1 1 100%;text-align:center}
+ .hpa .signup{padding:64px 0}
+ .hpa .foot{flex-direction:column;padding:40px 20px;font-size:15px}
+}
+@media (min-width:781px) and (max-width:1100px){
+ .hpa .grid3{grid-template-columns:repeat(2,1fr)}
+ .hpa .card img{height:360px}
+}
+</style>
 <div class="hpa">
 
   <header class="top">

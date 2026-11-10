@@ -7,35 +7,48 @@
 </head><body>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Rokkitt:wght@500;700&family=Unna:ital@1&display=swap" rel="stylesheet">
 <style>
-.w{font-family:Rokkitt,serif;color:#1C1C1C;max-width:1100px;margin:0 auto;padding:64px 20px}
-.w h1{font-family:'Alfa Slab One',serif;font-weight:400;color:#0F2240;font-size:clamp(34px,5vw,52px);margin:8px 0}
-.w p.s{font-family:Unna,serif;font-style:italic;font-size:21px;color:#4A4F57;margin:0 0 40px}
-.k{letter-spacing:.2em;color:#B4500F;font-size:14px}
+.w{font-family:Rokkitt,Georgia,serif;color:#1C1C1C}
+.top{position:relative;min-height:62vh;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(15,34,64,.15),rgba(15,34,64,.85)),url('https://denvermeats.com/wp-content/uploads/2026/11/JSF_7042-scaled.jpg') center/cover no-repeat fixed;color:#FFF3CC}
+.top .in{max-width:1100px;margin:0 auto;width:100%;padding:0 20px 56px}
+.k{letter-spacing:.2em;font-size:14px;color:#E8A46A}
+.top h1{font-family:'Alfa Slab One',serif;font-weight:400;font-size:clamp(36px,6vw,64px);margin:10px 0 8px;color:#FFF3CC}
+.top p{font-family:Unna,serif;font-style:italic;font-size:clamp(18px,2.2vw,23px);margin:0;max-width:640px}
+.body{max-width:1100px;margin:0 auto;padding:56px 20px 72px}
 .g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.c{display:block;text-decoration:none;border:1px solid #D9D0BE;background:#fff;padding:22px;color:#1C1C1C;transition:transform .2s}
-.c:hover{transform:translateY(-3px)}
-.sw{height:150px;margin-bottom:18px;display:flex;align-items:flex-end;padding:14px;font-family:'Alfa Slab One',serif;font-size:22px}
-.c h2{font-family:'Alfa Slab One',serif;font-weight:400;font-size:24px;color:#0F2240;margin:0 0 6px}
-.c p{margin:0;font-size:17px;line-height:1.5}
-.n{margin-top:44px;font-size:16px;color:#4A4F57;line-height:1.6}
+.c{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid #D9D0BE;color:#1C1C1C;transition:transform .2s,box-shadow .2s;overflow:hidden}
+.c:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,34,64,.12)}
+.c img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.c .t{padding:20px 22px 24px}
+.c .l{font-size:13px;letter-spacing:.16em;color:#B4500F}
+.c h2{font-family:'Alfa Slab One',serif;font-weight:400;font-size:24px;color:#0F2240;margin:6px 0 8px}
+.c p{margin:0 0 14px;font-size:17px;line-height:1.5}
+.c .go{font-weight:700;letter-spacing:.08em;color:#0F2240;border-bottom:2px solid #E8620A;align-self:flex-start}
+.n{margin-top:48px;background:#fff;border-left:4px solid #E8620A;padding:22px 24px;display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:start;font-size:17px;line-height:1.6;color:#33363C}
+.n img{width:120px;height:120px;object-fit:cover;object-position:72% center;border-radius:50%}
+.n b.h{letter-spacing:.08em;color:#B4500F}
+@media (max-width:1024px),(hover:none){.top{background-attachment:scroll}}
+@media (max-width:640px){.top{min-height:54vh}.body{padding:36px 16px 56px}.n{grid-template-columns:1fr;padding:20px}.n img{width:84px;height:84px}}
 </style>
 <div class="w">
+<header class="top"><div class="in">
 <span class="k">HIPPEY'S · HOMEPAGE DIRECTIONS · DRAFT</span>
 <h1>Pick a direction</h1>
-<p class="s">Three ways the new denvermeats.com could look. Same story, different feel.</p>
+<p>Three ways the new denvermeats.com could look. Same story, different feel.</p>
+</div></header>
+<div class="body">
 <div class="g">
-<a class="c" href="/a/"><div class="sw" style="background:#16181C;color:#F4EBD8">Smoked with wood.</div><h2>A · Smokehouse</h2><p>Dark, moody, editorial. Big photos, few words. Leads with the craft.</p></a>
-<a class="c" href="/b/"><div class="sw" style="background:#F5EEDF;color:#0F2240;border:1px solid #D9D0BE">Since 1969.</div><h2>B · Heritage Almanac</h2><p>Warm cream, classic type. Leads with the family history.</p></a>
-<a class="c" href="/c/"><div class="sw" style="background:#0F2240;color:#F7F4EE">What's for tonight?</div><h2>C · Corner Market</h2><p>Bright, friendly, shoppable. Leads with products and recipes.</p></a>
+<a class="c" href="/a/"><img src="https://denvermeats.com/wp-content/uploads/2026/11/A1-%E2%80%94-Hero-Ring-Bologna-on-the-Board-16-9.png" alt="Idea A preview"><div class="t"><span class="l">IDEA A</span><h2>Smokehouse</h2><p>Dark, moody, editorial. Big photos, few words. Leads with the craft.</p><span class="go">VIEW →</span></div></a>
+<a class="c" href="/b/"><img src="https://denvermeats.com/wp-content/uploads/2026/11/JSF_7042-scaled.jpg" alt="Idea B preview"><div class="t"><span class="l">IDEA B</span><h2>Heritage Almanac</h2><p>Warm cream, classic type. Leads with the family and the history.</p><span class="go">VIEW →</span></div></a>
+<a class="c" href="/c/"><img src="https://denvermeats.com/wp-content/uploads/2026/11/C1-%E2%80%94-Hero-Weeknight-Table-16-9.png" alt="Idea C preview"><div class="t"><span class="l">IDEA C</span><h2>Corner Market</h2><p>Bright, friendly, shoppable. Leads with products and recipes.</p><span class="go">VIEW →</span></div></a>
 </div>
-<div class="n" style="background:#fff;border-left:4px solid #E8620A;padding:20px 24px">
-<b style="letter-spacing:.08em;color:#B4500F">PLEASE READ · THESE ARE DRAFTS</b><br>
+<div class="n"><img src="https://denvermeats.com/wp-content/uploads/2026/11/JSF_7056-scaled.jpg" alt="Matt Forney at the plant"><div>
+<b class="h">PLEASE READ · THESE ARE DRAFTS</b><br>
 These three mockups are <b>not final designs</b>. They show the general look and feel of three different approaches to an artisan-style Hippey's website, so you can tell us which direction feels most like Hippey's.<br><br>
 • <b>Photos are rough stand-ins.</b> Some are AI-generated and not realistic. They will be replaced with real Hippey's photography of the plant, the crew and the products.<br>
 • <b>Text, links, colors and layout will all be refined</b> once a direction is chosen.<br>
 • Nothing here is live. The current denvermeats.com is unchanged.<br><br>
-Tip: scroll slowly on a computer to see the parallax (photos that stay still while the page moves).
-</div>
-</div>
+Tip: on a computer, scroll slowly to see the parallax (photos that stay still while the page moves). Each page also works on phones.
+</div></div>
+</div></div>
 
 </body></html>
