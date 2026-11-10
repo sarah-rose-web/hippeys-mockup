@@ -133,7 +133,15 @@
 @keyframes hbub{0%,100%{transform:translateX(30%) translateY(0)}50%{transform:translateX(30%) translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.hpa .spot::after{animation:none}}
 @media (max-width:780px){.hpa .spot{width:130px!important}.hpa .spot::after{font-size:12px;right:0;transform:none;animation:none}}
-</style>
+/*MOB2*/
+@media (max-width:780px){
+ .hpa .spot{width:150px!important;margin:44px auto 0;flex:0 0 auto}
+ .hpa .spot::after{left:50%!important;right:auto!important;top:-38px!important;transform:translateX(-50%)!important;animation:none!important;font-size:13px!important;white-space:nowrap}
+}
+@media (max-width:780px){
+ .hpa .signup .wrap>div:first-of-type{flex-direction:column!important;align-items:center!important;text-align:center}
+ .hpa .signup form{margin-left:auto;margin-right:auto}
+}</style>
 <script>
 (function(){if(window.__hm)return;window.__hm=1;
 var B="https://denvermeats.com/wp-content/uploads/2026/11/hippeys_";
@@ -156,6 +164,28 @@ function start(){
  });
 }
 if(document.readyState!=="loading")start();else document.addEventListener("DOMContentLoaded",start);
+})();
+</script>
+<!--PLXMOB--><style>
+.plx,.hpa .hero{background-attachment:scroll!important}
+.plx-on{position:relative;overflow:hidden;background-image:none!important}
+.plx-on>.plx-l{position:absolute;left:0;right:0;top:-18%;height:136%;background-size:cover;background-position:center;background-repeat:no-repeat;will-change:transform;z-index:0;pointer-events:none}
+.plx-on>*:not(.plx-l){position:relative;z-index:1}
+</style>
+<script>
+(function(){if(window.__plx)return;window.__plx=1;
+function init(){
+ if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var els=[].slice.call(document.querySelectorAll('.plx,.hpa .hero'));var L=[];
+ els.forEach(function(el){var bi=getComputedStyle(el).backgroundImage;if(!bi||bi==='none')return;
+  var l=document.createElement('div');l.className='plx-l';l.style.backgroundImage=bi;el.insertBefore(l,el.firstChild);el.classList.add('plx-on');L.push([el,l]);});
+ var tick=false;
+ function run(){tick=false;var vh=window.innerHeight;L.forEach(function(p){var r=p[0].getBoundingClientRect();if(r.bottom<-100||r.top>vh+100)return;
+  var c=(r.top+r.height/2-vh/2)/(vh/2+r.height/2);p[1].style.transform='translate3d(0,'+(c*r.height*0.15).toFixed(1)+'px,0)';});}
+ function on(){if(!tick){tick=true;requestAnimationFrame(run)}}
+ window.addEventListener('scroll',on,{passive:true});window.addEventListener('resize',on);run();
+}
+if(document.readyState!=="loading")init();else document.addEventListener("DOMContentLoaded",init);
 })();
 </script>
 <div class="hpa">
